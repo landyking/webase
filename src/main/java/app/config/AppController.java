@@ -42,6 +42,10 @@ public abstract class AppController {
         if (Texts.hasText(navTabId)) {
             success.setNavTabId(navTabId);
         }
+        String rel = request.getParameter("rel");
+        if (Texts.hasText(rel)) {
+            success.setRel(rel);
+        }
     }
 
     protected JsonResult dwzFailure(String msg) {
