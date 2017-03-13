@@ -59,7 +59,7 @@
         </div>
     </div>
     <div id="login_footer">
-        Copyright &copy; 2016-${currentYear} XDJA Inc. All Rights Reserved.
+        Copyright &copy; 2016-${currentYear} Yepool Inc. All Rights Reserved.
     </div>
 </div>
 
