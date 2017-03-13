@@ -3,8 +3,7 @@
 <div class="pageContent">
     <div id="jbsxBox2" class="unitBox" style="float:left; display:block; overflow:auto; width:614px;">
         <div class="pageHeader" style="border:1px #B8D0D6 solid">
-            <form id="pagerForm" onsubmit="return divSearch(this,'jbsxBox2');"
-                  action="${ctx}/admin/example/masterSlave/list"
+            <form id="pagerForm" onsubmit="return navTabSearch(this);" action="${ctx}/admin/example/masterSlave/list"
                   method="post">
                 <input type="hidden" name="numPerPage" value="${pageParam.numPerPage}"/>
                 <input type="hidden" name="page" value="${pageParam.page}"/>
@@ -36,7 +35,7 @@
                            target="ajaxTodo" title="确认要删除吗？"><span>删除</span></a></li>
                 </ul>
             </div>
-            <table class="table" width="100%" layoutH="113" rel="jbsxBox2">
+            <table class="table" width="100%" layoutH="113">
                 <thead>
                 <tr>
                     <th width="100">班级ID</th>
@@ -63,7 +62,7 @@
                 <div class="pages">
                     <span>显示</span>
                     <select class="combox" name="numPerPage"
-                            onchange="navTabPageBreak({numPerPage:this.value},'jbsxBox2')">
+                            onchange="navTabPageBreak({numPerPage:this.value})">
                         <option value="20" ${pageParam.numPerPage == 20 ? "selected": ""}>20</option>
                         <option value="50" ${pageParam.numPerPage == 50 ? "selected": ""}>50</option>
                         <option value="100" ${pageParam.numPerPage == 100 ? "selected": ""}>100</option>
@@ -72,7 +71,7 @@
                     <span>条，共${pageParam.totalCount}条</span>
                 </div>
 
-                <div class="pagination" rel="jbsxBox2" targetType="navTab" totalCount="${pageParam.totalCount}"
+                <div class="pagination" targetType="navTab" totalCount="${pageParam.totalCount}"
                      numPerPage="${pageParam.numPerPage}" pageNumShown="10"
                      currentPage="${pageParam.page}"></div>
 
